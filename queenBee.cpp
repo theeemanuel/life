@@ -99,7 +99,7 @@ int main()
 	lifeMatrix[midM+1][midN+2] = 1;
 	lifeMatrix[midM][midN+3] = 1;
 	
-	for (k=0; k<300; k++)
+	for (k=0; k<200; k++)
 	{
 		system("cls");
 		SetColor(15);
