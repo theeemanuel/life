@@ -1,11 +1,13 @@
 import numpy as np
 import matplotlib.pyplot as plt 
 import matplotlib.animation as animation
+from matplotlib import colors
 
 N = 100
-alive = 255
+alive = 1
 dead = 0
 life = [alive, dead]
+colormap = colors.ListedColormap(["black","cyan"])
 chancesOfLife = 0.11
 p = [chancesOfLife, 1-chancesOfLife]
 
@@ -36,7 +38,7 @@ def update(data):
     return [mat]
 
 fig, ax = plt.subplots()
-mat = ax.matshow(grid)
+mat = plt.imshow(grid, cmap=colormap)
 ani = animation.FuncAnimation(fig, update, interval=50, save_count=50)
 #ani.save('randomLife.gif', writer='imagemagick', fps=60)
 plt.show()
