@@ -1,8 +1,9 @@
 #include<stdio.h>
+#include<conio.h>
 #include<windows.h>
 #include<stdlib.h>
-#define M 48
-#define N 70
+#define M 50
+#define N 105
 
 void set_cursor(bool visible)
 {
@@ -99,11 +100,33 @@ int main()
 	lifeMatrix[midM+1][midN+2] = 1;
 	lifeMatrix[midM][midN+3] = 1;
 	
+	printf("Generation 0: \n");
+	for (i=0; i<M; i++)
+	{
+		for (j=0; j<N; j++)
+		{
+			if(lifeMatrix[i][j]==1)
+			{
+				SetColor(11);
+				printf("o ");
+			}
+			else
+			{
+				SetColor(0);
+				printf("o ");
+			}
+		}
+		printf("\n");
+	}
+	SetColor(15);
+	printf("Press any key to continue!");
+	set_cursor(0);
+	getch();
 	for (k=0; k<200; k++)
 	{
 		system("cls");
 		SetColor(15);
-		printf("\nGeneration %d: \n",k+1);
+		printf("Generation %d: \n",k+1);
 		evolution(lifeMatrix);
 		for (i=0; i<M; i++)
 		{
@@ -111,18 +134,19 @@ int main()
 			{
 				if(lifeMatrix[i][j]==1)
 				{
-					SetColor(3);
-					printf(" o ");
+					SetColor(11);
+					printf("o ");
 				}
 				else
 				{
-					SetColor(15);
-					printf(" . ");
+					SetColor(0);
+					printf("o ");
 				}
 			}
-			printf("\n");
-			set_cursor(0);
+			if(i != M-1)
+				printf("\n");
 		}
+		set_cursor(0);
 		Sleep(250);
 	}
 	return 0;
