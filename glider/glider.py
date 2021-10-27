@@ -16,11 +16,11 @@ grid = np.random.choice(life, N*N, p).reshape(N, N)
 for i in range(N):
     for j in range(N):
         grid[i][j] = dead
-grid[50][50] = alive
-grid[50+1][50+1] = alive
-grid[50+2][50] = alive
-grid[50+2][50-1] = alive
-grid[50+2][50+1] = alive
+grid[N//2][N//2] = alive
+grid[N//2 +1][N//2 +1] = alive
+grid[N//2 +2][N//2] = alive
+grid[N//2 +2][N//2 -1] = alive
+grid[N//2 +2][N//2 +1] = alive
 
 def gridView(data):
     mat.set_data(grid)
@@ -52,6 +52,6 @@ def update(data):
 
 fig, ax = plt.subplots()
 mat = plt.imshow(grid, cmap=colormap)
-ani = animation.FuncAnimation(fig, update, interval=50, save_count=50)
+ani = animation.FuncAnimation(fig, update, interval=60, save_count=50)
 #ani.save('glider.gif', writer='imagemagick', fps=60)
 plt.show()
