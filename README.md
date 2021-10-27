@@ -8,3 +8,5 @@
 ![Demo](https://github.com/theeemanuel/life/blob/main/glider/glider.gif)
 # [Queen Bee](https://www.conwaylife.com/wiki/Queen_bee)
 ![Demo](https://github.com/theeemanuel/life/blob/main/queenBee/queenBee.gif)
+# [Queen Bee Shuttle](https://www.conwaylife.com/wiki/Queen_bee_shuttle)
+![Demo](https://github.com/theeemanuel/life/blob/main/queenBeeShuttle/queenBeeShuttle.gif)
