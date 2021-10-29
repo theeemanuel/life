@@ -75,7 +75,8 @@ int evolution(int grid[N][N])
 
 int main()
 {
-	int i, j, k, lifeMatrix[M][N], midM = (M/2), midN = (N/2);
+	int i, j, k, lifeMatrix[M][N], midM = (M/2), midN = (N/2), fps = 60;
+	char being = 'o';
 									
 	for (i=0; i<M; i++)
 	{
@@ -126,7 +127,7 @@ int main()
 	{
 		system("cls");
 		SetColor(15);
-		printf("Generation %d: \n",k+1);
+		//printf("Generation %d: \n",k+1);
 		evolution(lifeMatrix);
 		for (i=0; i<M; i++)
 		{
@@ -135,19 +136,21 @@ int main()
 				if(lifeMatrix[i][j]==1)
 				{
 					SetColor(11);
-					printf("o ");
+					putchar(being);
+					putchar(' ');
 				}
 				else
 				{
 					SetColor(0);
-					printf("o ");
+					putchar(being);
+					putchar(' ');
 				}
 			}
 			if(i != M-1)
 				printf("\n");
 		}
 		set_cursor(0);
-		Sleep(250);
+		Sleep(1000/fps);
 	}
 	return 0;
 }
