@@ -10,3 +10,6 @@
 ![Demo](https://github.com/theeemanuel/life/blob/main/queenBee/queenBee.gif)
 # [Queen Bee Shuttle](https://www.conwaylife.com/wiki/Queen_bee_shuttle)
 ![Demo](https://github.com/theeemanuel/life/blob/main/queenBeeShuttle/queenBeeShuttle.gif)
+# The one, below was just a random thing that I tried. 
+It just has a single stable state, it either collapses into that or nothing.
+![Demo](https://github.com/theeemanuel/life/blob/main/immortals(not Conway's life)/immortals.gif)
