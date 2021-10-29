@@ -16,11 +16,11 @@ grid = np.random.choice(life, N*N, p).reshape(N, N)
 for i in range(N):
     for j in range(N):
         grid[i][j] = dead
+grid[N//2][N//2] = alive
 grid[N//2][N//2 -1] = alive
-grid[N//2][N//2 +1] = alive
+grid[N//2 -1][N//2] = alive
 grid[N//2 +1][N//2] = alive
-grid[N//2 +1][N//2 -1] = alive
-grid[N//2 +2][N//2] = alive
+grid[N//2 -1][N//2 +1] = alive
 
 def gridView(data):
     mat.set_data(grid)
